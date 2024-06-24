@@ -9,6 +9,7 @@ jobs:
   mage-test:
     name: "Mage Test: ${{ matrix.os }}"
     strategy:
+      fail-fast: false
       matrix:
         os: ['macos-latest', 'ubuntu-latest']
     runs-on: ${{ matrix.os }}
